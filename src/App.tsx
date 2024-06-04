@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect }from 'react';
+import { fetchUsers } from './services/apiServices';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await fetchUsers();
+      console.log(data);
+    };
+
+    getUsers();
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
