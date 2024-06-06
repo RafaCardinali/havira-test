@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchUsers } from './services/apiServices';
 import Map from './components/Map/Map';
+import UserList from './components/UserList/UserList';
 
 const App = () => {
   const [users, setUsers] = useState([]);
@@ -15,8 +16,13 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <Map users={users} />
+    <div className="relative overflow-hidden h-screen">
+      <div className="absolute inset-0">
+        <Map users={users} />
+      </div>
+      <div className="absolute top-0 right-0 w-1/4 h-screen overflow-auto bg-white bg-opacity-75">
+        <UserList users={users} />
+      </div>
     </div>
   );
 };

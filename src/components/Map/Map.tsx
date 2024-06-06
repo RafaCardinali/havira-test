@@ -30,6 +30,8 @@ const Markers: React.FC<MapProps> = ({ users }) => {
             <p>Email: ${user.email}</p>
             <p>Apelido: ${user.username}</p>
             <p>Telefone: ${user.phone}</p>
+            <p>Website: ${user.website}</p>
+            <p>Company: ${user.company.name}</p>
           </div>
         `);
     });
@@ -40,7 +42,7 @@ const Markers: React.FC<MapProps> = ({ users }) => {
 
 const Map: React.FC<MapProps> = ({ users }) => {
   return (
-    <MapContainer center={{ lat: 0, lng: 0 }} zoom={2} style={{ height: "100vh", width: "100%" }}>
+    <MapContainer center={{ lat: 0, lng: 0 }} zoom={2} style={{ height: "100vh", width: "75%" }}>
       <TileLayer
         url="https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=qwDbex8h0YUY0kIVRYYk"
         attribution='&copy; <a href="https://www.maptiler.com/">MapTiler</a>'
