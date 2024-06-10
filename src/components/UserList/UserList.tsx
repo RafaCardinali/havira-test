@@ -1,6 +1,5 @@
 import React from 'react';
 import { User } from '../../models/types';
-import { Link } from 'react-router-dom';
 
 interface UserListProps {
   users: User[];
@@ -9,9 +8,6 @@ interface UserListProps {
 const UserList: React.FC<UserListProps> = ({ users }) => {
   return (
     <div>
-      <div className='text-right'>
-      <Link to="/create-user" className="inline-block px-4 py-2 mt-4 mr-4 bg-blue-500 text-white text-center rounded hover:bg-blue-700">Novo Usuário</Link>
-      </div>
       <div className="p-4">
         {users.map((user, index) => (
           <div key={index} className="flex mb-4 bg-gray-100 rounded-lg p-2">
