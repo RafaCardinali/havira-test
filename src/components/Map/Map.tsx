@@ -31,7 +31,7 @@ const Markers: React.FC<MapProps> = ({ users }) => {
             <p>Apelido: ${user.username}</p>
             <p>Telefone: ${user.phone}</p>
             <p>Website: ${user.website}</p>
-            <p>Company: ${user.company.name}</p>
+            <p>Companhia: ${user.company.name}</p>
           </div>
         `);
     });
